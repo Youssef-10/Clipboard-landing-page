@@ -1,0 +1,321 @@
+/* Start of global roles  */
+:root {
+  /* Primary */
+  --Strong-Cyan: hsl(171, 66%, 44%);
+  --Light-Blue: hsl(233, 100%, 69%);
+  /* Neutral */
+  --Dark-Grayish-Blue: hsl(210, 10%, 33%);
+  --Grayish-Blue: hsl(201, 11%, 66%);
+}
+/* Small Screens */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium Screens */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large Screens */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+.container .main-heading {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: var(--Dark-Grayish-Blue);
+}
+.landing .container .main-heading {
+  font-size: 40px;
+}
+.features .container .main-heading,
+.remote .container .main-heading {
+  font-size: 30px;
+  margin-top: 100px;
+}
+.tools .container .main-heading {
+  font-size: 35px;
+  margin-top: 50px;
+}
+.downloads .container .main-heading {
+  font-size: 33px;
+  margin-top: 130px;
+  font-weight: bold;
+}
+.container .main-heading + p {
+  /* width: 55%; */
+  margin: auto;
+  color: var(--Grayish-Blue);
+  line-height: 1.7;
+  text-align: center;
+}
+
+/* End of global roles  */
+body {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 18px;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Landing and downloads */
+.landing {
+  content: "";
+  position: relative;
+  background-image: url(../images/bg-header-desktop.png);
+  background-size: cover;
+  top: 0;
+  left: 0;
+  min-height: 90vh;
+  padding-top: 100px;
+}
+.landing .container,
+.downloads .container {
+  text-align: center;
+}
+.landing .landing-image {
+  max-width: 100%;
+}
+.landing .links,
+.downloads .links {
+  margin-top: 50px;
+}
+.landing .links > a:first-of-type,
+.landing .links > a:last-of-type,
+.downloads .links > a:first-of-type,
+.downloads .links > a:last-of-type {
+  padding: 15px 40px 15px 40px;
+  border-radius: 40px;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.landing .links > a:first-of-type,
+.downloads .links > a:first-of-type {
+  background-color: var(--Strong-Cyan);
+  margin-right: 10px;
+  box-shadow: 0px 5px 8px 0px hsl(171deg 66% 44% / 55%);
+}
+.landing .links > a:last-of-type,
+.downloads .links > a:last-of-type {
+  background-color: var(--Light-Blue);
+  box-shadow: 0px 5px 8px 0px hsl(233deg 100% 69% / 67%);
+}
+.landing .links > a:first-of-type:hover,
+.landing .links > a:last-of-type:hover,
+.downloads .links > a:first-of-type:hover,
+.downloads .links > a:last-of-type:hover {
+  opacity: 0.7;
+}
+@media (max-width: 767px) {
+  .landing .container .main-heading {
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+  .container .main-heading + p {
+    width: 100%;
+  }
+  .landing .links > a:first-of-type,
+  .landing .links > a:last-of-type,
+  .downloads .links > a:first-of-type,
+  .downloads .links > a:last-of-type {
+    display: block;
+  }
+  .landing .links > a:first-of-type,
+  .downloads .links > a:first-of-type {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+/* Features */
+.flex-box {
+  display: flex;
+  margin-top: 100px;
+  gap: 100px;
+}
+.flex-box .image {
+  position: relative;
+  left: -35px;
+}
+.flex-box .image img {
+  max-width: 100%;
+}
+.flex-box .feature {
+  max-width: 380px;
+}
+.flex-box .feature > div {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.flex-box .feature > div h2 {
+  margin-bottom: 15px;
+  color: var(--Dark-Grayish-Blue);
+}
+.flex-box .feature > div p {
+  color: var(--Grayish-Blue);
+  line-height: 1.7;
+}
+@media (max-width: 767px) {
+  .flex-box {
+    flex-direction: column;
+    text-align: center;
+    gap: 0;
+  }
+  .flex-box .image {
+    left: 0;
+  }
+  .flex-box .image img {
+    max-width: 80%;
+  }
+  .flex-box .feature > div p {
+    width: 80%;
+    margin: auto;
+  }
+}
+/* remote */
+.remote {
+  text-align: center;
+}
+.remote img {
+  max-width: 100%;
+  margin-top: 100px;
+}
+@media (max-width: 767px) {
+  .remote img {
+    margin-top: 50px;
+  }
+}
+/* tools */
+.tools .grid-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 100px;
+  text-align: center;
+}
+.tools .grid-box > div img {
+  margin-bottom: 30px;
+  min-width: 50px;
+}
+.tools .grid-box > div h3 {
+  margin-bottom: 20px;
+  color: var(--Dark-Grayish-Blue);
+  font-weight: bold;
+}
+.tools .grid-box > div p {
+  color: var(--Grayish-Blue);
+  line-height: 1.7;
+  font-size: 16px;
+}
+@media (max-width: 767px) {
+  .tools .grid-box {
+    margin-top: 50px;
+    gap: 60px;
+  }
+}
+.tools .logos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+@media (max-width: 767px) {
+  .tools .logos {
+    flex-direction: column;
+  }
+  .tools .logos img:not(:last-of-type) {
+    margin-bottom: 70px;
+  }
+}
+
+/* footer */
+.footer {
+  background-color: hsla(202, 11%, 66%, 0.11);
+  width: 100%;
+  height: fit-content;
+  margin-top: 150px;
+  padding: 50px;
+}
+.footer .container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: space-between;
+  position: relative;
+}
+.footer .container .logo img {
+  max-width: 50px;
+}
+.footer .container .info {
+  position: absolute;
+  left: 250px;
+  display: flex;
+}
+.footer .container .info > div:not(:last-of-type) {
+  margin-right: 70px;
+}
+.footer .container .info > div span {
+  display: block;
+  color: var(--Dark-Grayish-Blue);
+  transition: 0.3s;
+  cursor: pointer;
+}
+.footer .container .info > div span:hover {
+  color: var(--Strong-Cyan);
+}
+.footer .container .info > div span:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+
+.footer .container .social img:not(:first-of-type) {
+  margin-left: 20px;
+}
+.footer .container .social img {
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .footer .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer .container .logo {
+    margin-bottom: 30px;
+  }
+  .footer .container .info {
+    left: 0;
+    position: relative;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  .footer .container .info > div:not(:last-of-type) {
+    margin-right: 0;
+  }
+  .footer .container .info > div span:not(:last-of-type) {
+    margin-bottom: 40px;
+  }
+  .footer .container .info > div span {
+    margin-bottom: 40px;
+  }
+  .footer .container .social img:not(:last-of-type) {
+    margin-right: 30px;
+  }
+}
